@@ -1,0 +1,9 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://www.gridcloud.*",
+  "name" : "client",
+  "theme" : "client",
+  "id" : 10000003,
+  "description" : "Apereo foundation sample service myaaaa",
+  "evaluationOrder" : 1
+}
