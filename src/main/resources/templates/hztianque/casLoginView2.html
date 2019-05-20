@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<link rel="stylesheet" href="/css/index.css"/>
+	<title>统一登录平台</title>
+	<link rel="icon" href="//static.cheguo.com/static/c/web/img/ico.ico" type="image/x-icon">
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body class="loginpage" onkeydown="on_return();">
+<img class="bigbg" id="bgimg" src=""/>
+
+<div class="loginbox">
+	<div class="loginbg"></div>
+	<div class="loginform">
+		<form id="pwdForm" class="form-horizontal" action="/login" method="post">
+			<div style="height:50px;">
+				<div class="systitle" style="margin-bottom: 7px;">统一登录平台</div>
+
+			</div>
+			<input type="hidden" />
+			<div class="form_group forminput boxblure">
+				<label><img src="/images/tell.png"/></label>
+				<input id="username" name="username" tabindex="1" placeholder="请输入用户名" type="text" value="" maxlength="11" autocomplete="off"/>
+				<!--<input name="phone" id="phone" type="tel" maxlength="11" placeholder="请输入手机号码">-->
+
+
+			</div>
+			<div class="form_group forminput boxblure">
+				<label><img src="/images/Key.png"/></label>
+				<input id="password" name="password" tabindex="2" placeholder="请输入密码" type="password" value="" maxlength="32" autocomplete="new-password"/>
+			</div>
+			<!-- <div class="codebox boxblure">
+            <input class="inputcode" name="captcha" id="captcha" autocomplete="off" type="text" maxlength="4" tabindex="3"  placeholder="请输入验证码">
+            <label><img class="code-img" src="captcha.jpg" onclick="this.src='captcha.jpg?'+Math.random()"></label>
+            </div> -->
+			<input type="hidden" name="execution" value="24aeac9a-b1fc-4108-9025-43713ff9e671_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuYlNzdlF6bFpXRkp0UTFFd1VETnVRMUJtT0hCMVNGSm1jMnc1UzBvcmJpOXZTRWROZFVOdFlsWmtVM1V2ZDJZME1tUnROMUpSVTFsUk1qZHZNbTh2YW5NNVUyUTVlVEIzVGpCd1VDdEVibmxGUVRBMFVTdE5TbVE0Um1wVk9YcG1OVFJJYUZSdVEzQmlUM1IyUXpKeFJrWXJjekptUkZjMlNXWTBTU3RRVkRGTmRUZ3JPV05FUlVwRlVVOUZSVlZNTWpCNGRUWjFiemRRYTJGTFFsSmlTbkZCUzJSTWVFVkRWSFEwVDIxbU0wSlNNVGRPZERaSFNsUTRlWGhtZVRCMmVXZDJReXRuVUVkU05FNVRLek42V0ZaTGMyTkVkV3h1ZWtob1JVaHZaR2hXY3pOUk9HTllTMUl6TjBsWFRIaFpSMjlYUWs1eFFYUjJibWRGVVZaQlZtcFZSRk4zVWl0eVRIVnhiV1pvWVRaTGRVNW5ObTV2YVN0SlQycFFaM2RrYzNaSmRFSlZSa2MzZDNOMGNUZGxaakp2U0ZWQldWWlBZU3Q2YlZSeWF6SkdlVU5uVmpGNlJtaDBaemg0VVV0RmNWVlFhMHByZURWSmNqazVRMkZDVUZkMGNEUlNieTloY1ZoT1YyVkJhVWRpZUdKS2NGaFRNak5pZUdoQ1NHbHZaVkkzYURSMFdXRndUVEUwTDFoNUt6aGhWVVpLTUZSUGNXdEJkQzgxZFdwUlluWnZWMnh6TlZaeVdESkZWR2RoTnpOelQxSk1OSGQ1ZHpaVWJFWmtkR04yU0VWR1ZFMXdjME12YjA5T1RtVnRVVWxLYWtwRE9VRmlUalF5WXk4emFpdHRMMUZKVG5aa2NHWTBkWFJOYUd0dFQwMUVkemxVWTFKNmR5dGhZbWhDY2pBMFJYZHRMelJZV1hkWVVWaFBZa1YzV0ZwWlNGYzNhMlJ2TUZSd0swVlhWV1V3YTNSMmRITk9kRnBRY1U0MVJrNW5hVXRKYWt0VGJ6RmpVVFZIY21OQk4yOVNlRUUyV1dweFJ6aG9UbTEwYlVWT01WSkdVMjlxU1dKUFRrb3pkbUZEU0hveWMyaFFTamdyVDBoeGVGcFRaRlF5V0VaWFJYSnpiMDVpVDB0UmJrRk1kM1pyVERCdVdGSkhkV1UzV0hKQmVraENhVGhIVlVVNVNVb3pkbFpZWWpONmNrcHpkSFpvVjNKdmFsVlBjazQzVlZKa1RYbEtaa1Z2TW5sRVNYVkpSelp5V2tGVk1qTkRWMmhCUm1Sell6a3ZiQzltYTB4ck1EazFVMHQxSzBvcmVGa3JhVFJ1WTJRMk4xTkZja3BOU1hwMlZFZDFhMjFXZW1kRFFtSk1OMHhKYmtJMVdXTktka1pHYjAxRWQwWklUSFJwZVU5d2JuUjFkbTQ0WWxCTlpXcGlMMnB6UTBkRmFISnlZbFJuWjJGc1JEbDNlR1pPV0doTWVqQm1RbU5rVWpkNVNtbDNla1JKTkZGelRtUTFhV3czYWpWaVpDdElWemRFWnl0V01sRnVVM00wTTNaVWFERjFiVGRPVkZaS1VUSjVXVmh0WWpOU2RYVjVOSEpvYVRWUGEwUTRhRTFVY1Rsc2QyTlpSR0owYVRVNGNrMXZlVXhrTmpVM1lrYzNWa3hLVGtjeU1WZFROMEp2VkVWRmMwMVNjV3QwTTNVMGNYSkdSM1ozTkZSSFNYWldVRzg1V1doMkwzTmhibm9ySzAxM1VsQlVVR3hNVHpKeFZtOVFaalpyU1VnNVFWRkRka3ROVlhOS2RGVkdkRlJNTUd0QlExTTFNMDlKWldoSVpqWjFRak40U2tOTVYyTnpNbEpGTkVJeVpXWTBWRUl3V1VoeVdFOVNOamswWXpBcmRUVnZOWFJDVjBsT1NsVnNORGQ2Y0ZSUWFFRkJRV2RYUmxNNFdHSjFlV056TWtjeFVHRlJhemRNUzJGTVNXSjRSV3MyUzJ0ak1HazJjM0pqUlVoU1JYVllRVmhTVTIxRGMydE5iM2RhUkdWRmRYUmpaSEpNT1VwdFpsbGhSWFZLVTFsWVIyNVZieTlPZDFGaU5Vb3ZiVUZMWWxWRllsWldOM3BLYm5sa1MyY3piRWxxUmpsSk9UWjNZV2RGZHpJdmJYWnRlak5sY21KallYcDVNMVZxUWtaVFoyVjNSVnBJZUV0dGRIcFVUa052V1hoclUweEtSV0ZDTDBORGJFUlljamhHV0ZSb0wzTTROelZFTlVOU1dXcEJWakl2T1RRM1QxZzVjRGR5TTAxblJrTm1RWEJOZDI1VlJUWkRhRkE1V0hkaU1pOW1kakY2WkdGaWJrWjFTMFZUU21SS01qWnNNMHh1VkM5aFYzWXdURGg0YUdaeU0ySm1WVXhJYTI5WlZsWnBRaXR1U1ZvcllTdHJiMHBMWVdFNWNscFphMUJYZUdJNWVFVXJTMkYwWTFObE5HUm9hRVZKV1VzMWF6bE5XREkxUjAxbWFEbElWWGh1UlhCUE1XdFBiR2RXVWpkdlRXWm5VVEJDYUZKS1NGaHdiVEZEYUdSVE5GazVOWEZUTlRGSllsSlpkVzVwVEdWWGVsTm1Xblp1UVRCcFZUaDFkRzE1Tmtkdk9XeFhPR3cwVkdzMk0wNXBhbGhITkN0c2JFdFJiMFp4Y1hWSmFFMWtSemxUWms5MFpVdDVXa1I0ZFZOS1dEVjRlRlozT0ZoVlVtbzRkMkpuT1ZaRGIwRjVVM1kwY21sekswMVpjRUowUjBvNE0yNU5kMUZtZWtjNFRsbHBjMDlUVlU4ME9YRnJaRGd4YTBkb2RETjFWVzFxUVhoYVZVNUpOMVJhYnpaNVkybG5iRkkwVVZvelJqbGxUUzh3TDA1NmNWcFNOMG80WkU5cVpYZDBLMkpXYUZGVU5raFZWRFZWZFU1WFFtdHBTVzVwTDNJNGRFc3pkbGxhU2pWMmNHMWtVblY0Ymt4dE1IY3JTRWRtUWtoaGNUaFRTbVE1ZFVoSlUwcExaU3RVTjFGYVMwVnRibTF2WVd4TFpETnFXVllyVEVkSGQyMW9hRzAyZWpOR2IyZDNWRGRVWmsxSlVIcHNiRUZOU0ZOM0wzQjFMelZ6UlRSM2JWUnVhelprY205TGFuTkpjM0pMVTFKM2RXNXJMMmhzTkVwSVVuVTJOM1ZwUjBOdGVuWlNaRkpKT0c1YWFUYzRTbVo0YjJWRVFWQlFNeXRVWm10c1MxVnhaVVZGY1hWdVRFSjZRblZsZGtnNGNscExlbkoxTlUxeGFEWlhWeTlDVTNoNlZtTnFSSEpqU0RCSVNWZHFkM0p1T0hNelJFUmFZbTFsU0RjdllVVkNiMUkyVVhFclUxaFliR3MyYWpsaGN6ZGFZbEV3VFRWck1GQlFRVlpoWTNwV1ZrTjJjbUYzTkUwelIweFdZMU5tZWtOVVRXMVRlbkJNSzNsTmFEZFRaV0ozTVhod1NrZFlXVlZ4VGxkVmRrNUhWU3NyTnpGbGRYUnhObXNyTkhoYVlXOVhaRTVZT0dScWJVUjViVnA2UmtaQmVWWnRaeTlRTjNOeU4wcHVaREpVZWpGd2EwbENZMmx0VURoVmR6TktVV2t6T1dwaWVuTmtlbmhKV2pjdldteFJTRzEwYm5CTlNrRnNOV1ZpU0ZKalpVVTBiRTEzY2psTE56UTBhek56U0ZOTU1tMUdiVXhqVjJwQmNsQTNia1ZDT0hwRldXZzNiMGtyU0habFExZEZUMHd3TjFoRlpHWkRZak00WkM5T1ZtMWtZVFU0UVc5WGNWQXdaa0Z5U0cxRWRteFRNMVpDYWxCMk0yUnVhbEl2UlUxaGQwSjZkRWxsU1M5Q2NURm9ObUpzVVdwUlJEWlRZMWh2U0U5UVdFRkZRbUY0UVdjOVBRLmM3RmZKOHBKRlN0SkZZMHFzWm02WjVoOGF6R2Y2MHdWZ0tLWG0zRTJxZEE5dHk3V05PUU1hQmtLdXIyRFY4TFhqMWJQSFNGNWxIMnFSbkJsUzk1VHRR"/>
+			<input type="hidden" name = "_eventId_submit"/>
+			<div class="form_group s">
+				<button id="btnsubmit" type="button" class="submit" tabindex="5" >登入</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="copyright">Copyright © 2015-2018 杭州天阙</div>
+<div class="copyright copyright2">ICP XXXXXX</div>
+<script src="//code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+<script type="" src="/js/index.js"></script>
+</body>
+</html>
+
+
+

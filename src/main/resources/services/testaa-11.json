@@ -1,9 +1,9 @@
 {
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
   "serviceId" : "^http://www.test.*",
-  "name" : "aa",
-  "theme" : "aa",
-  "id" : 1,
-  "description" : "Apereo foundation sample service myaaaa",
+  "name" : "testaa",
+  "theme" : "hztianque",
+  "id" : 11,
+  "description" : "test aa page",
   "evaluationOrder" : 1
 }

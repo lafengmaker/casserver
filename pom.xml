@@ -15,8 +15,8 @@
                 <artifactId>wrapper-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <verifyDownload>true</verifyDownload>
-                    <checksumAlgorithm>MD5</checksumAlgorithm>
+                   <!-- <verifyDownload>true</verifyDownload>
+                    <checksumAlgorithm>MD5</checksumAlgorithm>-->
                 </configuration>
             </plugin>
             <plugin>
